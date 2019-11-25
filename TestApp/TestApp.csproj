@@ -37,6 +37,8 @@
     <None Include="Releases.MD" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="ContextDefault.cs" />
     <Compile Include="TestApp.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

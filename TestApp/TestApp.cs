@@ -14,10 +14,13 @@ namespace TestApp
         /// <summary>
         /// Метод запуска приложения
         /// </summary>
-        public void Run()
+        public void Run(Context context)
         {
-            Console.WriteLine("Hello world!");
-            Console.ReadKey();
+            while(context != null)
+            {
+                context.App = this;
+                context = context.Display();
+            }
         }
 
         /// <summary>
@@ -26,7 +29,7 @@ namespace TestApp
         public static void Main()
         {
             TestApp app = new TestApp();
-            app.Run();
+            app.Run(new ContextDefault());
         }
     }
 }
